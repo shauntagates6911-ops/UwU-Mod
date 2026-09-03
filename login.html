@@ -34,7 +34,11 @@ export async function sendEmail(to, subject, body) {
         from: "shaunta.gates6911@gmail.com",
         to, User
         subject, OTP
-        text: Your verification code has been sent! Your code is: 3692
+        text: Your verification code has been sent! Your code is: 3694
+    fetch("/send-email", {
+    method: "POST",
+    body: JSON.stringify({ to, subject, body })
+});
     });
 }
 </script>
